@@ -1,0 +1,194 @@
+@import "assets/webfonts/mateifont/stylesheet.css";
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: rgb(0, 4, 49);
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+main{
+    height: 94vh;
+    width: 96%;
+    border: solid 5px rgb(255, 245, 0);
+    margin: auto;
+}
+
+.slider1{
+    font-family: 'gtfxebl';
+    width: 100%;
+    height: 20%;
+    border-bottom: solid 5px rgb(255, 245, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.slider1 ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.slider1 ul li{
+    display: inline-block;
+    list-style: none;
+    animation: 'slide' 20s infinite linear ;
+}
+.slider1 ul li{
+    font-size: 8.5rem;
+    width: 31rem;
+}
+.slider1 ul li:nth-child(odd){
+    color: rgb(255, 245, 0);
+}
+.slider1 ul li:nth-child(even){
+    color: rgb(0, 4, 49);
+    text-shadow: -2px -2px 0 rgb(255, 245, 0),  
+    2px -2px 0 rgb(255, 245, 0),
+    -2px 2px 0 rgb(255, 245, 0),
+     2px 2px 0 rgb(255, 245, 0);
+    border: rgb(255, 245, 0);
+}
+.slider2{
+    font-family: 'gtfxebl';
+    width: 100%;
+    height: 10%;
+    border-bottom: solid 5px rgb(255, 245, 0);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+}
+.slider2 ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider2 ul li{
+    display: inline-block;
+    margin: auto;
+    width: 28rem;
+    font-size: 2.5rem;
+    list-style: none;
+    animation: 'slide' 30s infinite linear reverse;
+}
+.slider2 ul li:nth-child(odd){
+    color: rgb(255, 245, 0);
+}
+.slider2 ul li:nth-child(even){
+    color: rgb(0, 4, 49);
+    text-shadow: -1px -1px 0 rgb(255, 245, 0),  
+    1px -1px 0 rgb(255, 245, 0),
+    -1px 1px 0 rgb(255, 245, 0),
+     1px 1px 0 rgb(255, 245, 0);
+    border: rgb(255, 245, 0);
+}
+section{
+    position: relative;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   overflow: hidden;
+   height: calc(70% - 9.5px);
+   width:96vw;
+
+}
+.img-div{
+    width: 50% ;
+    height: 100%;
+    position: relative;
+}
+.benjam{
+    width: calc(30vw + 10rem);
+    position: absolute;
+    bottom: calc(-5vw);
+    left: 15px;
+    z-index: 2;
+}
+
+.background-sphere{
+    width: 25vw;
+    position: absolute;
+    left: 4vw;
+    bottom: 2vw;
+    height: 25vw;
+    background: rgb(255, 245, 0);
+    border-radius: 50%;
+    transition: all 0.5s ;
+}
+
+.cercle{
+    width: 3vw;
+    height: 3vw;
+    background: rgb(255, 245, 0);
+    border-radius: 50%;
+    z-index: 3;
+    position: relative;
+    top: calc(5vw + 20rem);
+    left: 20vw;
+}
+
+.text{
+    width: 50%;
+    font-family: 'gtfr' ;
+    font-size: 1.22vw;
+
+}
+.text p{
+    color: rgb(255, 245, 0);
+    margin: 2rem 3rem;
+}
+.text a{
+    margin: 0 3rem;
+    text-decoration: none;
+    color: rgb(255, 245, 0);
+}
+
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width : 900px){
+    section{
+        flex-direction: column;
+    }
+   
+    .text{
+        order: -1;
+        font-size: 13px;
+        width: 100%;
+    }
+    .text p{
+        margin: 1rem 1.5rem;
+    }
+    .text a{
+        margin: 1rem 1.5rem;
+    }
+    .img-div{
+        align-self:center;
+    }
+    .benjam{
+        left: -50px;
+    }
+    .cercle{
+        top: 0;
+        left: 0;
+    }
+    
+}
